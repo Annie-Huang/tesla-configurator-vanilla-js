@@ -3,4 +3,5 @@ Build A Tesla Car Configurator | Tailwind & Vanilla JavaScript (https://www.yout
 https://github.com/bradtraversy/tesla-configurator-vanilla-js
 https://github.com/Annie-Huang/tesla-configurator-vanilla-js
 
+https://tailwindcss.com/docs/installation/play-cdn
 --------------------------------------------------------------------------
