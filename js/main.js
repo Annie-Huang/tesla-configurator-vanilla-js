@@ -47,6 +47,12 @@ const handleColorButtonClick = (event) => {
     const buttons = event.currentTarget.querySelectorAll('button');
     buttons.forEach((btn) => btn.classList.remove('btn-selected'));
     button.classList.add('btn-selected');
+
+    // Change exterior image
+    if (event.currentTarget === exteriorColorSection) {
+      const color = button.querySelector('img').alt;
+      exteriorImage.src = exteriorImages[color];
+    }
   }
 };
 
