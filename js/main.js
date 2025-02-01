@@ -59,8 +59,11 @@ const handleColorButtonClick = (event) => {
 
     // Change exterior image
     if (event.currentTarget === exteriorColorSection) {
-      const color = button.querySelector('img').alt;
-      exteriorImage.src = exteriorImages[color];
+      // const color = button.querySelector('img').alt;
+      // exteriorImage.src = exteriorImages[color];
+
+      selectedColor = button.querySelector('img').alt;
+      updateExteriorImage();
     }
 
     // Change interior image
