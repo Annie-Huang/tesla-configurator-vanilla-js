@@ -1,0 +1,12 @@
+.btn-selected {
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 8px;
+  transition: transform 0.3s;
+}
+
+.btn-selected:hover {
+  /* transform from the tutorial is not working, use scale instead. */
+  /*transform: scale(1) !important;*/
+  scale: 1 !important;
+}
