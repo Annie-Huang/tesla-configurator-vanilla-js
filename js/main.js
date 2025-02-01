@@ -67,7 +67,13 @@ const handleColorButtonClick = (event) => {
 const handleWheelButtonClick = (event) => {
   if (event.target.tagName === 'BUTTON') {
     const buttons = document.querySelectorAll('#wheel-buttons button');
-    buttons.forEach((btn) => btn.classList.remove('bg-gray-700', 'text-white'));
+    buttons.forEach((btn) => {
+      btn.classList.remove('bg-gray-700', 'text-white');
+      btn.classList.add('bg-gray-200');
+    });
+
+    // Add selected styles to clicked button
+    event.target.classList.add('bg-gray-700', 'text-white');
   }
 };
 
