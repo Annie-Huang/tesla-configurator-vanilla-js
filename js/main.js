@@ -53,6 +53,12 @@ const handleColorButtonClick = (event) => {
       const color = button.querySelector('img').alt;
       exteriorImage.src = exteriorImages[color];
     }
+
+    // Change interior image
+    if (event.currentTarget === interiorColorSection) {
+      const color = button.querySelector('img').alt;
+      interiorImage.src = interiorImages[color];
+    }
   }
 };
 
