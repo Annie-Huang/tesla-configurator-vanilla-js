@@ -15,7 +15,14 @@ const handleScroll = () => {
 const handleColorButtonClick = (event) => {
   let button;
 
-  console.log(event.target);
+  // console.log(event.target);
+  console.log(event.target.tagName); // it can print IMG, BUTTON, DIV, depend on where you click
+
+  if (event.target.tagName === 'IMG') {
+    button = event.target.closest('button');
+  } else if (event.target.tagName === 'BUTTON') {
+    button = event.target;
+  }
 };
 
 // Event Listeners
