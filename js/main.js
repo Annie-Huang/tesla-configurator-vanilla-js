@@ -71,6 +71,19 @@ const handleColorButtonClick = (event) => {
   }
 };
 
+// Update exterior image based on color and wheels
+const updateExteriorImage = () => {
+  const performanceSuffix = selectedOptions['Performance Wheels']
+    ? '-performance'
+    : '';
+  const colorKey =
+    selectedColor in exteriorImages ? selectedColor : 'Stealth Grey';
+  exteriorImage.src = exteriorImages[colorKey].replace(
+    '.jpg',
+    `${performanceSuffix}.jpg`,
+  );
+};
+
 // Wheel Selection
 const handleWheelButtonClick = (event) => {
   if (event.target.tagName === 'BUTTON') {
