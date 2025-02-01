@@ -9,4 +9,5 @@
   /* transform from the tutorial is not working, use scale instead. */
   /*transform: scale(1) !important;*/
   scale: 1 !important;
+  cursor: auto !important;
 }

@@ -6,4 +6,8 @@ https://github.com/Annie-Huang/tesla-configurator-vanilla-js
 https://tailwindcss.com/docs/installation/play-cdn
 https://cdnjs.com/libraries/font-awesome
 
+
+https://tailwindcss.com/docs/cursor
+https://stackoverflow.com/questions/73524088/is-there-a-way-to-chain-multiple-tailwind-css-classes-on-a-single-hover-instance
 --------------------------------------------------------------------------
+
