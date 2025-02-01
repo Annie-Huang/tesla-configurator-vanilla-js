@@ -5,6 +5,14 @@ const exteriorImage = document.querySelector('#exterior-image');
 const interiorImage = document.querySelector('#interior-image');
 const wheelButtonsSection = document.querySelector('#wheel-buttons');
 
+// Act as a global selected state for color or options
+let selectedColor = 'Stealth Grey';
+const selectedOptions = {
+  'Performance Wheels': false,
+  'Performance Package': false,
+  'Full Self-Drving': false,
+};
+
 // Handle Top Bar On Scroll
 const handleScroll = () => {
   const atTop = window.scrollY === 0;
