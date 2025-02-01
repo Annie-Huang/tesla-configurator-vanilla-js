@@ -99,11 +99,14 @@ const handleWheelButtonClick = (event) => {
     // Add selected styles to clicked button
     event.target.classList.add('bg-gray-700', 'text-white');
 
-    const selectedWheel = event.target.textContent.includes('Performance');
+    // const selectedWheel = event.target.textContent.includes('Performance');
+    // exteriorImage.src = selectedWheel
+    //   ? './images/model-y-stealth-grey-performance.jpg'
+    //   : './images/model-y-stealth-grey.jpg';
 
-    exteriorImage.src = selectedWheel
-      ? './images/model-y-stealth-grey-performance.jpg'
-      : './images/model-y-stealth-grey.jpg';
+    selectedOptions['Performance Wheels'] =
+      event.target.textContent.includes('Performance');
+    updateExteriorImage();
   }
 };
 
