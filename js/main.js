@@ -34,6 +34,14 @@ const updateTotalPrice = () => {
   // Reset the current price to base price
   currentPrice = basePrice;
 
+  if (selectedOptions['Performance Wheels']) {
+    currentPrice += pricing['Performance Wheels'];
+  }
+
+  if (selectedOptions['Performance Package']) {
+    currentPrice += pricing['Performance Package'];
+  }
+
   // Update the total price in UI
   totalPriceElement.textContent = `$${currentPrice.toLocaleString()}`;
 };
