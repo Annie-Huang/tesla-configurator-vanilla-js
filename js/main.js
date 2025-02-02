@@ -9,6 +9,9 @@ const totalPriceElement = document.querySelector('#total-price');
 const fullSelfDrivingCheckbox = document.querySelector(
   '#full-self-driving-checkbox',
 );
+const accessoryCheckboxes = document.querySelectorAll(
+  '.accessory-form-checkbox',
+);
 
 const basePrice = 52490;
 let currentPrice = basePrice;
@@ -51,6 +54,23 @@ const updateTotalPrice = () => {
   if (selectedOptions['Full Self-Driving']) {
     currentPrice += pricing['Full Self-Driving'];
   }
+
+  // Accessory Checkboxes
+  accessoryCheckboxes.forEach((checkbox) => {
+    // Extract the accessory label
+    const accessoryLabel = checkbox
+      .closest('label')
+      .querySelector('span')
+      .textContent.trim();
+    // console.log(accessoryLabel);
+
+    const accessoryPrice = pricing['Accessories'][accessoryLabel];
+
+    // Add to current price if accessory is selected
+    if (checkbox.checked) {
+      currentPrice += accessoryPrice;
+    }
+  });
 
   // Update the total price in UI
   totalPriceElement.textContent = `$${currentPrice.toLocaleString()}`;
@@ -173,6 +193,11 @@ const fullSelfDrivingChange = () => {
   selectedOptions['Full Self-Driving'] = fullSelfDrivingCheckbox.checked;
   updateTotalPrice();
 };
+
+// Handle Accessory Checkbox Listeners
+accessoryCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', updateTotalPrice);
+});
 
 // Event Listeners
 // requestAnimationFrame will increase performance. It's used to schedule the function to run at an optimal time for smooth visual updates
