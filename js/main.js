@@ -147,8 +147,15 @@ const handleWheelButtonClick = (event) => {
 
 // Performance Package Selection
 const handlePerformanceButtonClick = () => {
-  performanceBtn.classList.toggle('bg-gray-700');
+  // toggle method returns:
+  // A boolean value, true or false, indicating whether token is in the list after the call or not.
+  const isSelected = performanceBtn.classList.toggle('bg-gray-700');
   performanceBtn.classList.toggle('text-white');
+
+  // Update selected options
+  selectedOptions['Performance Package'] = isSelected;
+
+  updateTotalPrice();
 };
 
 // Event Listeners
