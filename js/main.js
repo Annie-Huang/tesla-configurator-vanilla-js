@@ -210,6 +210,10 @@ accessoryCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', updateTotalPrice);
 });
 
+// Initial Update Total Price
+// Need it to update the down payment price and monthly payment price from total price on page launch.
+updateTotalPrice();
+
 // Event Listeners
 // requestAnimationFrame will increase performance. It's used to schedule the function to run at an optimal time for smooth visual updates
 // Without this, handlescroll would just be called hundreds of times or could be called hundreds of times per second and could potentially lead to Performance issues
