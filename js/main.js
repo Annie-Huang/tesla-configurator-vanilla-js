@@ -4,6 +4,7 @@ const interiorColorSection = document.querySelector('#interior-buttons');
 const exteriorImage = document.querySelector('#exterior-image');
 const interiorImage = document.querySelector('#interior-image');
 const wheelButtonsSection = document.querySelector('#wheel-buttons');
+const performanceBtn = document.querySelector('#performance-btn');
 
 // Act as a global selected state for color or options
 let selectedColor = 'Stealth Grey';
@@ -110,6 +111,12 @@ const handleWheelButtonClick = (event) => {
   }
 };
 
+// Performance Package Selection
+const handlePerformanceButtonClick = () => {
+  performanceBtn.classList.toggle('bg-gray-700');
+  performanceBtn.classList.toggle('text-white');
+};
+
 // Event Listeners
 // requestAnimationFrame will increase performance. It's used to schedule the function to run at an optimal time for smooth visual updates
 // Without this, handlescroll would just be called hundreds of times or could be called hundreds of times per second and could potentially lead to Performance issues
@@ -117,3 +124,4 @@ window.addEventListener('scroll', () => requestAnimationFrame(handleScroll));
 exteriorColorSection.addEventListener('click', handleColorButtonClick);
 interiorColorSection.addEventListener('click', handleColorButtonClick);
 wheelButtonsSection.addEventListener('click', handleWheelButtonClick);
+performanceBtn.addEventListener('click', handlePerformanceButtonClick);
