@@ -29,6 +29,15 @@ const pricing = {
   },
 };
 
+// Update total price in the UI
+const updateTotalPrice = () => {
+  // Reset the current price to base price
+  currentPrice = basePrice;
+
+  // Update the total price in UI
+  totalPriceElement.textContent = `$${currentPrice.toLocaleString()}`;
+};
+
 // Handle Top Bar On Scroll
 const handleScroll = () => {
   const atTop = window.scrollY === 0;
@@ -123,6 +132,8 @@ const handleWheelButtonClick = (event) => {
     selectedOptions['Performance Wheels'] =
       event.target.textContent.includes('Performance');
     updateExteriorImage();
+
+    updateTotalPrice();
   }
 };
 
